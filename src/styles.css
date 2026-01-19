@@ -1,0 +1,276 @@
+/* Scholar Disambiguator - Styles
+ * All classes prefixed with 'sd-' to avoid conflicts with Google Scholar styles
+ */
+
+/* Container for the sidebar panel */
+.sd-container {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 13px;
+  color: #545454;
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+  max-width: 300px;
+}
+
+/* Header section */
+.sd-header {
+  font-size: 14px;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Toggle/collapse button */
+.sd-toggle {
+  background: none;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #5f6368;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.sd-toggle:hover {
+  background: #f5f5f5;
+}
+
+/* Search button */
+.sd-button {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.sd-button:hover {
+  background: #1557b0;
+}
+
+.sd-button:disabled {
+  background: #dadce0;
+  cursor: not-allowed;
+}
+
+/* Loading state */
+.sd-loading {
+  text-align: center;
+  padding: 16px 0;
+  color: #5f6368;
+}
+
+/* Results list */
+.sd-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual author card */
+.sd-author-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 8px;
+  border-bottom: 1px solid #e8eaed;
+  transition: background 0.2s;
+}
+
+.sd-author-card:last-child {
+  border-bottom: none;
+}
+
+.sd-author-card:hover {
+  background: #f5f5f5;
+}
+
+/* Author thumbnail */
+.sd-author-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.sd-author-thumb-placeholder {
+  background: #e8eaed;
+}
+
+/* Author info container */
+.sd-author-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Author name link */
+.sd-author-name {
+  color: #1a0dab;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sd-author-name:hover {
+  text-decoration: underline;
+}
+
+/* Author affiliation */
+.sd-author-affiliation {
+  color: #545454;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+/* Citation count */
+.sd-author-citations {
+  color: #70757a;
+  font-size: 11px;
+}
+
+/* Error state */
+.sd-error {
+  color: #d93025;
+  padding: 12px 0;
+}
+
+/* No results state */
+.sd-no-results {
+  color: #5f6368;
+  padding: 12px 0;
+  text-align: center;
+}
+
+/* Hint text */
+.sd-hint {
+  color: #70757a;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* Show more button */
+.sd-show-more {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sd-show-more:hover {
+  text-decoration: underline;
+}
+
+/* Floating panel fallback */
+.sd-floating {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Refresh button */
+.sd-refresh {
+  background: none;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #5f6368;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 6px 12px;
+  margin-top: 12px;
+  width: 100%;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.sd-refresh:hover {
+  background: #f5f5f5;
+  border-color: #bdc1c6;
+}
+
+/* Pagination */
+.sd-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e8eaed;
+}
+
+.sd-page-btn {
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #1a73e8;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 8px;
+  transition: background 0.2s;
+}
+
+.sd-page-btn:hover:not(:disabled) {
+  background: #f5f5f5;
+}
+
+.sd-page-btn:disabled {
+  color: #bdc1c6;
+  cursor: not-allowed;
+}
+
+.sd-page-info {
+  display: flex;
+  gap: 4px;
+}
+
+.sd-page-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  color: #1a73e8;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.sd-page-num:hover {
+  background: #f5f5f5;
+}
+
+.sd-page-num.sd-page-current {
+  background: #1a73e8;
+  color: #fff;
+  cursor: default;
+}

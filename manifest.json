@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Scholar Disambiguator",
+  "version": "1.0.0",
+  "description": "Find authors with the same name on Google Scholar",
+  "permissions": ["activeTab"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://scholar.google.com/*",
+    "https://scholar.google.co.uk/*",
+    "https://scholar.google.ca/*",
+    "https://scholar.google.com.au/*",
+    "https://scholar.google.de/*",
+    "https://scholar.google.fr/*",
+    "https://scholar.google.co.jp/*",
+    "https://scholar.google.es/*",
+    "https://scholar.google.it/*",
+    "https://scholar.google.com.br/*",
+    "https://scholar.google.co.in/*",
+    "https://scholar.google.com.hk/*",
+    "https://scholar.google.com.tw/*",
+    "https://scholar.google.co.kr/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://scholar.google.com/citations*",
+        "https://scholar.google.co.uk/citations*",
+        "https://scholar.google.ca/citations*",
+        "https://scholar.google.com.au/citations*",
+        "https://scholar.google.de/citations*",
+        "https://scholar.google.fr/citations*",
+        "https://scholar.google.co.jp/citations*",
+        "https://scholar.google.es/citations*",
+        "https://scholar.google.it/citations*",
+        "https://scholar.google.com.br/citations*",
+        "https://scholar.google.co.in/citations*",
+        "https://scholar.google.com.hk/citations*",
+        "https://scholar.google.com.tw/citations*",
+        "https://scholar.google.co.kr/citations*"
+      ],
+      "js": ["src/content.js"],
+      "css": ["src/styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  }
+}

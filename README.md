@@ -1,1 +1,3 @@
-# Google-Scholar-Author-Disambiguator
+![branding](icons/scholar-disambiguator.png)
+
+# Google Scholar AuthorDisambiguator
