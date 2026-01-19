@@ -12,7 +12,7 @@ Google Scholar search results often surface the wrong author profile for common 
 
 ## The Solution
 
-Scholar Disambiguator brings DBLP-style author disambiguation to Google Scholar. When viewing any author's profile, one click reveals all other researchers with the same name, complete with affiliations and citation counts to help you identify the right person.
+**Scholar Disambiguator** brings DBLP-style author disambiguation to Google Scholar. When viewing any author's profile, one click reveals all other researchers with the same name, complete with affiliations and citation counts to help you identify the right person.
 
 ## Features
 
